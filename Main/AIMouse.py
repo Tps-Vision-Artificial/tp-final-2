@@ -34,7 +34,6 @@ def main():
         # Obtengo la punta de los dedos indice y medio
         if len(lmList) != 0:
             x1, y1 = lmList[8][1:]
-            x2, y2 = lmList[12][1:]
 
         # Chequeo que dedos están arriba
         fingers = detector.fingersUp()
