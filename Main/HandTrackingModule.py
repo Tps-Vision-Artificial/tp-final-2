@@ -57,7 +57,7 @@ class handDetector():
 
             # Primero chequeo que mano estoy mostrando, si la punta del meñique esta a la derecha de la punta del
             # pulgar [4] , es la mano derecha. Y como el pulgar no puede ir abajo, lo que hago es ver si la punta
-            # del pulgar esta a la derecha del nudillo del pulgar [3], y asi lo considero como abierto
+            # del pulgar esta a la izquierda del nudillo del pulgar [3], y asi lo considero como abierto
             if self.lmList[self.tipIds[4]][1] < self.lmList[self.tipIds[0]][1]:
                 if self.lmList[self.tipIds[0]][1] > self.lmList[self.tipIds[0] - 1][1]:
                     fingers.append(1)
@@ -65,7 +65,7 @@ class handDetector():
                     fingers.append(0)
             else:
                 # si la punta del meñique esta a la izquierda, entonces es la mano izquierda y veo que el
-                # dedo este a la izquierda del nudillo para asi considerarlo abierto
+                # dedo este a la derecha del nudillo para asi considerarlo abierto
                 if self.lmList[self.tipIds[0]][1] < self.lmList[self.tipIds[0] - 1][1]:
                     fingers.append(1)
                 else:
